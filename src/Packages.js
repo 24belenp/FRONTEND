@@ -82,7 +82,7 @@ function Packages(props) {
         }else {
             async function addPackage() {
                 try {
-                     const response = await PackagesAPI.postPackage(paackage);
+                    await PackagesAPI.postPackage(paackage);
                 } catch(error) {
                     setMessage('An unexpected error happened');
                 }

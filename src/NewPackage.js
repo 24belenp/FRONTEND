@@ -27,11 +27,11 @@ function NewPackage(props) {
 
     return(
         <tr>
-            <td><input classQuantity="form-control" quantity="code" value={code} onChange={(event) => setCode(event.target.value)}/></td>
-            <td><input classQuantity="form-control" quantity="quantity" value={quantity} onChange={(event) => setQuantity(event.target.value)}/></td>
-            <td><input classQuantity="form-control" quantity="delivery_date" value={delivery_date} onChange={(event) => setDelivery_date(event.target.value)}/></td>
-            <td><input classQuantity="form-control" quantity="statuss" value={statuss} onChange={(event) => setStatuss(event.target.value)}/></td>
-            <td><button classQuantity="btn btn-primary" onClick={onClick}>ADD PACKAGE</button></td>
+            <td><input className="form-control" name="code" value={code} onChange={(event) => setCode(event.target.value)}/></td>
+            <td><input className="form-control" name="quantity" value={quantity} onChange={(event) => setQuantity(event.target.value)}/></td>
+            <td><input className="form-control" name="delivery_date" value={delivery_date} onChange={(event) => setDelivery_date(event.target.value)}/></td>
+            <td><input className="form-control" name="statuss" value={statuss} onChange={(event) => setStatuss(event.target.value)}/></td>
+            <td><button className="btn btn-primary" onClick={onClick}>ADD PACKAGE</button></td>
         </tr>
     )
 }
