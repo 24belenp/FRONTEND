@@ -38,7 +38,7 @@ function Packages(props) {
         return true;
         
     }
-
+////////////////////////////////////59
     function onPackageEdit(newPackage, oldPackage) {
         const validation =  validatePackageCode(newPackage);
         if(! validation) {
@@ -62,7 +62,7 @@ function Packages(props) {
         return true;
        
     }
-
+    ///////////////42
     function onPackageDelete(paackage) {
         PackagesAPI.deleteById(paackage.code).then(res =>{
            setPackages((prevPackages) => {
@@ -73,7 +73,7 @@ function Packages(props) {
     }
 
 
-
+/////////////////////////////////////////81
     function onAddPackage(paackage) { 
 
         const validation = validatePackageCode(paackage);
