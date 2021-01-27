@@ -60,6 +60,7 @@ class PackagesAPI {
             console.log(res)
             return res.data;
         }).catch(error => {
+            
             console.error(error)
         });
      
