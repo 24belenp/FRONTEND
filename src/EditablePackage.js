@@ -13,13 +13,14 @@ function EditablePackage(props) {
         }
     }
 
-    var packageRender;
+    var paackageRender;
     if(isEditing){
-        packageRender = <EditPackage package={props.package} onDelete={props.onDelete} onSave={savePackage}/>;
+        paackageRender = <EditPackage paackage={props.paackage} onDelete={props.onDelete} onSave={savePackage}/>;
     }else{
-        packageRender = <Package package={props.package} onDelete={props.onDelete} onEdit={() => setIsEditing(true)}/>
+        paackageRender = <Package paackage={props.paackage} onDelete={props.onDelete} onEdit={() => setIsEditing(true)}/>
     }
-    return packageRender;
+
+    return paackageRender;
 }
 
 export default EditablePackage;
