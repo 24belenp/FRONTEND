@@ -53,10 +53,10 @@ class PackagesAPI {
     }
 
     static async updateById( value) {
-        axios.put(PackagesAPI.API_BASE_URL + "/packages/"+value.code, value,
+        axios.put(PackagesAPI.API_BASE_URL + "/packages/" + value.code, value, 
         {headers: {
             apikey: 'c60fe1cc-d80e-464f-a180-2185da66fdf8'
-        }}).then(res => {
+       }}).then(res => {
             console.log(res)
             return res.data;
         }).catch(error => {
