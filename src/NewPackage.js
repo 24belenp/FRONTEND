@@ -16,7 +16,7 @@ function NewPackage(props) {
 
         const result = props.onAddPackage(newPackage);
 
-        if(result) {
+        if(!result) {
             setCode('');
             setQuantity('');
             setDelivery_date('');

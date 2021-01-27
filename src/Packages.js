@@ -30,8 +30,11 @@ function Packages(props) {
     };
 
     function validatePackageCode(paackage) {
-        if(paackage.code === ''){
+        if(paackage.code === ''|| paackage.quantity === '' || paackage.statuss === ''|| paackage.delivery_date === ''){
             setMessage('A code must be package');
+            return false;
+        } if(paackage.code.length > 7){
+            setMessage('The code must be less than 7 digits')
             return false;
         }
 
@@ -46,8 +49,12 @@ function Packages(props) {
         if(! validation) {
             return false;
         }
-                //Call API - PUT Proider
+                //Call API - PUT package
                 PackagesAPI.updateById(newPackage)
+                if(newPackage.code !== oldPackage.code){
+                    setMessage('Cannot change de CODE');
+                    return false;
+                }
 
 
         setPackages((prevPackages) => {
